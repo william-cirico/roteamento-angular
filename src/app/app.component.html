@@ -1,0 +1,21 @@
+<header>
+  <h1>Roteamento no Angular</h1>
+  <nav>
+    <ul>
+      <li><a routerLink="primeira-pagina" routerLinkActive="active">Primeira página</a></li>
+      <li><a routerLink="segunda-pagina" routerLinkActive="active">Segunda página</a></li>
+      <li><a routerLink="clientes" routerLinkActive="active">Página de clientes</a></li>
+      <li><a routerLink="lazy-loading" routerLinkActive="active">Página com lazy loading</a></li>
+      <li><a routerLink="login" routerLinkActive="active">Login</a></li>
+      <li><a routerLink="pagina-privada" routerLinkActive="active">Página privada</a></li>
+    </ul>
+  </nav>
+  <h3>Status de Autenticação: {{ authService.getStatus() }}</h3>
+  <button 
+    *ngIf="authService.getStatus() === 'online'" 
+    (click)="authService.signOut()">Sair</button>
+</header>
+<router-outlet></router-outlet>
+<footer>
+  Criado em 2023 &copy; By William.
+</footer>

@@ -1,0 +1,8 @@
+<h2>Detalhes do Cliente</h2>
+<p *ngIf="cliente">
+    ID: {{ cliente.id }} <br>
+    Nome: {{ cliente.nome }} <br>
+    Cidade: {{ cliente.cidade }} <br>
+    Estado: {{ cliente.estado }} <br>
+</p>
+<p *ngIf="!cliente">Cliente não encontrado</p>

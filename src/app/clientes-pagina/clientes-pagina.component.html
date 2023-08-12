@@ -1,0 +1,16 @@
+<h2>Clientes</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cliente of clientes">
+            <td>{{ cliente.id }}</td>
+            <td><a [routerLink]="['/clientes', cliente.id]">{{ cliente.nome }}</a></td>
+        </tr>
+    </tbody>
+</table>
